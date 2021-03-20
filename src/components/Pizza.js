@@ -1,7 +1,10 @@
 import React from 'react';
 
+import { useHistory } from 'react-router-dom'
+
 function Pizza(props) {
-    console.log(props)
+
+ // console.log(props)
     return (
         <article>
             <h3>{props.pizza.name}</h3>

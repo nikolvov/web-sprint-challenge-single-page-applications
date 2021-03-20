@@ -79,6 +79,7 @@ const App = () => {
         <div className='nav-links'>
             <Link to="/">Home</Link>
             <Link to="/pizza">Build Pizza</Link>
+            <Link to="/order">My order</Link>
         </div>
       </nav>
       <h3>Pizza Builder</h3>
@@ -93,8 +94,8 @@ const App = () => {
             errors={formErrors}
           />
         </Route>
-        <Route path="/pizza">
-          { pizzas.map(pizza => (<Pizza pizza={pizza}/>)) }
+        <Route path="/order"> 
+        { pizzas.map(pizza => (<Pizza  key={pizza.id} pizza={pizza}/>))}
         </Route>
       </Switch>
     </div>
